@@ -4,7 +4,7 @@
  'W1': 63.0,
  'A1': 31.5,
  
- '''py
+```python
  import serial
 from time import sleep
 import datetime
@@ -77,7 +77,7 @@ while ( 1 == 1):
 	sleep (5)
 	SendCommand(remote_ID,"E" + eev_target)	#sends 0AE02.50, command format ENN.NN
 	sleep (5)
- '''
+```
  
  Script output example:
  ![script output screenshot](./m_script_output_screen.png)
