@@ -1,9 +1,11 @@
-# HP-integration-example
+# Heat Pump integration example
 
- 'E1': 0,
- 'W1': 63.0,
- 'A1': 31.5,
- 
+This example shows how to access Valden Heat Pump data from server, Raspberry PI, and so on.<br><br>
+
+All you need is a USB->RS485 converter and python2 installed.<br>
+Connect your computer to RS485 line as pictured below, connect another side of wire like described at [Valden Display page](https://github.com/openhp/Display/) and run script from an example below.<br>
+Remember: RS485 is a 3-wire line, do not use cheap converters without "signal ground" and with only A and B. They'll work only for few meters distances.<br>
+
 ```python
 import serial
 from time import sleep
@@ -53,8 +55,8 @@ except serial.serialutil.SerialException:
 eev_target = "02.50"		#new eev temperature difference
 newtemp = "31.50"		#new setpoint temperature
 
-ID 	= chr(0x30)		#this script ID, 0x30 supported by all Valden components, so do not change this value
-remote_ID = chr(0x41)		#Remote Display ID ( this display https://github.com/openhp/Display  or that display https://github.com/openhp/ServiceDisplay )
+ID 	= chr(0x30)		#this script ID, 0x30 by default, default value supported by all Valden components so do not change it
+remote_ID = chr(0x41)		#Remote Display ID ( this display https://github.com/openhp/Display/ or that display https://github.com/openhp/ServiceDisplay/ )
 				#Remote Display ID can be changed, and yes: few devices with uniq IDs can work together at the same time at same line
 
 #-------------------------------------------------------
@@ -81,5 +83,19 @@ while ( 1 == 1):
 	sleep (5)
 ```
  
- Script output example:
- ![script output screenshot](./m_script_output_screen.png)
+Script output example:
+![script output screenshot](./m_script_output_screen.png)
+
+What's next? You have all information you need to integrate, for example, with Home Assistant or another "Smart Home" system you like. Or may be Cacti. Or something like this. Just parse gotten strings (that's very easy in python) and feed name/value pairs to your system.<br>
+I do not use "smart home" systems, but I like graphs. Graphs helps to analyse processes dynamics. So I have a script (much more complicated script) on server side, that get stats from my devices and draw graphs for me.<br>
+Example, daily graph for one of my Heat Pumps:<br>
+![daily graph example](./m_daily_graph_example.png)<br><br>
+
+And one more: you can use "set temperature" commands to automatically change "setpoint" temperature and create comfortable balance between power saving and house temperature. I.e. daily-dependent, hourly-dependent or something-else temperature dependent system.<br>
+
+## License
+GPLv3. <br>
+This product is distributed in the hope that it will be useful,	but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.<br>
+## Author
+<br>
+gonzho АТ web.de (c) 2015-2021<br>
