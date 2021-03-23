@@ -84,7 +84,7 @@ while ( 1 == 1):
 ```
  
 Script output example:
-[![script output screenshot](./m_script_output_screen.png)](./m_script_output_screen.png)
+[![script output screenshot](./m_script_output_screen.png =250x)](./m_script_output_screen.png)
 
 What's next? You have all information you need to integrate, for example, with Home Assistant or another "Smart Home" system you like. Or may be Cacti. Or something like this. Just parse gotten strings (that's very easy in python) and feed name/value pairs to your system.<br>
 I do not use "smart home" systems, but I like graphs. Graphs helps to analyse processes dynamics. So I have a script (much more complicated script) on server side, that get stats from my devices and draw graphs for me.<br>
