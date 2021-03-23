@@ -92,7 +92,7 @@ I do not use "smart home" systems, but I like graphs. Graphs helps to analyse pr
 Example, daily graph for one of my Heat Pumps:<br>
 ![daily graph example](./m_daily_graph_example.png)<br><br>
 To get graphs you can use something like Cacti monitoring system.<br>
-And one more: you can use "set temperature" commands to automatically change "setpoint" temperature and create comfortable balance between power saving and house temperature. I.e. daily-dependent, hourly-dependent or something-else temperature dependent system.<br><br>
+And one more: you can use "set temperature" commands to automatically change "setpoint" temperature and create comfortable balance between power saving and house temperature. Or daily-dependent, hourly-dependent or something-else temperature dependent system.<br><br>
 
 
 ## License
