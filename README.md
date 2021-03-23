@@ -5,7 +5,7 @@
  'A1': 31.5,
  
 ```python
- import serial
+import serial
 from time import sleep
 import datetime
 import string
