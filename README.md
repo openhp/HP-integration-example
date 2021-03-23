@@ -85,7 +85,7 @@ while ( 1 == 1):
 ```
  
 Script output example (click to enlarge):<br>
-<img src="./m_script_output_screen.png" width="200"><br>
+<img src="./m_script_output_screen.png" width="400"><br>
 Short names (keys) specific for JSON communication:
 | Abbr. | Full name             |
 | ----- | --------------------  |
