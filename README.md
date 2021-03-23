@@ -85,8 +85,16 @@ while ( 1 == 1):
 ```
  
 Script output example (click to enlarge):<br>
-<img src="./m_script_output_screen.png" width="200">
-For abbrevations see appendix at [HeatPumpController](https://github.com/openhp/HeatPumpController/) page.
+<img src="./m_script_output_screen.png" width="200"><br>
+Short names (keys) specific for JSON communication:
+| Abbr. | Full name             |
+| ----- | --------------------  |
+| A1   | setpoint      		| 
+| E1   | error code     	|
+| HPC   | Heat Pump connected (to remote display, 1=yes, 0=no)      |
+| W1   | Watts    		|
+All another abbrevations (keys) you'll see in responses are listed at [HeatPumpController](https://github.com/openhp/HeatPumpController/) appendix.<br><br>
+
 
 What's next? You have all information you need to integrate, for example, with Home Assistant or another "Smart Home" system you like. Just parse gotten strings (that's very easy in python) and feed key-value pairs to your favourite system.<br>
 I do not use "smart home" systems, but I like graphs. Graphs helps to analyse processes dynamics. So I have a script (much more complicated script) on server side, that get stats from all my devices and draw graphs for me.<br>
