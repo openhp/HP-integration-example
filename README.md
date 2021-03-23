@@ -93,6 +93,7 @@ Short names (keys) specific for JSON communication:
 | E1   | error code     	|
 | HPC   | Heat Pump connected (to remote display, 1=yes, 0=no)      |
 | W1   | Watts    		|
+
 All another abbrevations (keys) you'll see in responses are listed at [HeatPumpController](https://github.com/openhp/HeatPumpController/) appendix.<br><br>
 
 
