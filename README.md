@@ -1,10 +1,11 @@
-# Heat Pump integration example
+# Valden Heat Pump integration example
 
 This example shows how to access Valden Heat Pump data from server, Raspberry PI, and so on.<br><br>
 
 All you need is a USB->RS485 converter and python2 installed.<br>
 Connect your computer to RS485 line as pictured below, connect another side of wire like described at [Valden Display page](https://github.com/openhp/Display/) and run script from an example below.<br>
 Remember: RS485 is a 3-wire line, do not use cheap converters without "signal ground" and with only A and B. They'll work only for few meters distances.<br>
+{-wiring picture-}<br>
 
 ```python
 import serial
@@ -83,18 +84,16 @@ while ( 1 == 1):
 	sleep (5)
 ```
  
-Script output example:
+Script output example (click to enlarge):
 <img src="./m_script_output_screen.png" width="200">
 
-
-[![script output screenshot](./m_script_output_screen.png =250x)](./m_script_output_screen.png)
-
-What's next? You have all information you need to integrate, for example, with Home Assistant or another "Smart Home" system you like. Or may be Cacti. Or something like this. Just parse gotten strings (that's very easy in python) and feed name/value pairs to your system.<br>
+What's next? You have all information you need to integrate, for example, with Home Assistant or another "Smart Home" system you like. Just parse gotten strings (that's very easy in python) and feed key-value pairs to your favourite system.<br>
 I do not use "smart home" systems, but I like graphs. Graphs helps to analyse processes dynamics. So I have a script (much more complicated script) on server side, that get stats from my devices and draw graphs for me.<br>
 Example, daily graph for one of my Heat Pumps:<br>
 ![daily graph example](./m_daily_graph_example.png)<br><br>
+To get graphs you can use something like Cacti monitoring system.<br>
+And one more: you can use "set temperature" commands to automatically change "setpoint" temperature and create comfortable balance between power saving and house temperature. I.e. daily-dependent, hourly-dependent or something-else temperature dependent system.<br><br>
 
-And one more: you can use "set temperature" commands to automatically change "setpoint" temperature and create comfortable balance between power saving and house temperature. I.e. daily-dependent, hourly-dependent or something-else temperature dependent system.<br>
 
 ## License
 GPLv3. <br>
