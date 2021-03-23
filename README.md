@@ -4,7 +4,7 @@
  'W1': 63.0,
  'A1': 31.5,
  
- '''python
+ '''py
  import serial
 from time import sleep
 import datetime
