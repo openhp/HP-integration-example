@@ -94,7 +94,7 @@ Short names (keys) specific for JSON communication:
 | HPC   | Heat Pump connected (to remote display, 1=yes, 0=no)      |
 | W1   | Watts    		|
 
-All another abbrevations (keys) you'll see in responses are listed at [HeatPumpController](https://github.com/openhp/HeatPumpController/) appendix.<br><br>
+All another abbrevations (keys) you'll see in responses are listed at [HeatPumpController](https://github.com/openhp/HeatPumpController/) appendix. Error codes also there.<br><br>
 
 
 What's next? You have all information you need to integrate, for example, with Home Assistant or another "Smart Home" system you like. Just parse gotten strings (that's very easy in python) and feed key-value pairs to your favourite system.<br>
