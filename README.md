@@ -19,7 +19,7 @@ def SendCommand(ID_to, command):
 	print "> " + str(datetime.datetime.now())[0:19] + " we sent: " + towrite
 	try:
 		serial.write(towrite)
-	except:	#do not catch all exceptions in real code
+	except:		#do not catch all exceptions in a real code
 		print "USB>Serial converter disconnected?", sys.exc_info()
 		line = None
 		return 0
@@ -27,7 +27,7 @@ def SendCommand(ID_to, command):
 	#read result
 	try:
 		line = serial.readline()   # read a '\n' terminated line
-	except:	#do not catch all exceptions in real code
+	except:		#do not catch all exceptions in a real code
 		print "USB>Serial converter disconnected?", sys.exc_info()
 		line = None
 		return 0
@@ -42,7 +42,7 @@ def SendCommand(ID_to, command):
 #open serial
 print "Starting.."
 try:
-	serial = serial.Serial('/dev/ttyUSB2', 9600, timeout=3)	#Change serial name to yours!
+	serial = serial.Serial('/dev/ttyUSB2', 9600, timeout=3)		#Change serial name to yours!
 	print "Opened: ", serial.name
 except serial.serialutil.SerialException:
 	print "Serial open error! Change serial name to yours! (ex: /dev/ttyUSB5, or something like COM9 at win)"
@@ -51,27 +51,29 @@ except serial.serialutil.SerialException:
 #-------------------------------------------------------
 #some example values
 eev_target = "02.50"		#new eev temperature difference
-newtemp = "31.50"			#new setpoint temperature
+newtemp = "31.50"		#new setpoint temperature
 
-ID 		= chr(0x30)	#this script ID, 0x30 supported by all Valden components, so do not change this value
-remote_ID = chr(0x41)	#Remote Display ID ( this display https://github.com/openhp/Display  or that display https://github.com/openhp/ServiceDisplay )
-					#Remote Display ID can be changed, few devices with uniq IDs can work together at the same time at same line
+ID 	= chr(0x30)		#this script ID, 0x30 supported by all Valden components, so do not change this value
+remote_ID = chr(0x41)		#Remote Display ID ( this display https://github.com/openhp/Display  or that display https://github.com/openhp/ServiceDisplay )
+				#Remote Display ID can be changed, and yes: few devices with uniq IDs can work together at the same time at same line
 
 #-------------------------------------------------------
-#example cycle
-#sends 10 times (G)er all command
-#then sends (T)emperature set 
-#then sends (E)EV difference set
-#then cycle
-
+#example cycle, interaction with Remote Display
 #commands: 
 #(G)et all 
 #new (T)emperature set (setpoint) 
 #new (E)EV difference set
 
+
+#cycle sends 10 times (G)er all command
+#then sends (T)emperature set 
+#then sends (E)EV difference set
+#then cycle
+
+
 while ( 1 == 1):
 	for i in xrange (10):
-		SendCommand(remote_ID,"G")		#sends 0AG : from ID 0 to ID A (G)et all
+		SendCommand(remote_ID,"G")	#sends 0AG : from ID 0 to ID A (G)et all
 		sleep (5)
 	SendCommand(remote_ID,"T" + newtemp)	#sends 0AT31.50, command format TNN.NN
 	sleep (5)
