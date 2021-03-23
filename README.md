@@ -88,7 +88,7 @@ Script output example (click to enlarge):<br>
 <img src="./m_script_output_screen.png" width="200">
 
 What's next? You have all information you need to integrate, for example, with Home Assistant or another "Smart Home" system you like. Just parse gotten strings (that's very easy in python) and feed key-value pairs to your favourite system.<br>
-I do not use "smart home" systems, but I like graphs. Graphs helps to analyse processes dynamics. So I have a script (much more complicated script) on server side, that get stats from my devices and draw graphs for me.<br>
+I do not use "smart home" systems, but I like graphs. Graphs helps to analyse processes dynamics. So I have a script (much more complicated script) on server side, that get stats from all my devices and draw graphs for me.<br>
 Example, daily graph for one of my Heat Pumps:<br>
 ![daily graph example](./m_daily_graph_example.png)<br><br>
 To get graphs you can use something like Cacti monitoring system.<br>
