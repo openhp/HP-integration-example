@@ -5,7 +5,9 @@ This example shows how to access Valden Heat Pump data from server, Raspberry PI
 All you need is a USB->RS485 converter and python2 installed.<br>
 Connect your computer to RS485 line as pictured below, connect another side of wire like described at [Valden Display page](https://github.com/openhp/Display/) and run python script from an example below.<br>
 Remember: RS485 is a 3-wire line. Do not use cheap converters without "signal ground" and with only A and B. They'll work only for few meters distances.<br>
-{-wiring picture-}<br>
+<img src="./m_usb-to-rs485_connection1.jpg" width="400"><br>
+<img src="./m_usb-to-rs485_connection2.jpg" width="400"><br><br>
+
 
 ```python
 import serial
