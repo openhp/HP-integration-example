@@ -61,7 +61,7 @@ newtemp = "31.50"		#new setpoint temperature
 
 ID 	= chr(0x30)		#this script ID, 0x30 by default, default value supported by all Valden components so do not change it
 remote_ID = chr(0x41)		#Remote Display ID ( this display https://github.com/openhp/Display/ or that display https://github.com/openhp/ServiceDisplay/ )
-				#Remote Display ID can be changed, and yes: few devices with uniq IDs can work together at the same time at same line
+				#Remote Display ID can be changed, and yes: few devices with unique IDs can work together at the same time at same line
 
 #-------------------------------------------------------
 #example cycle, interaction with Remote Display
@@ -86,27 +86,24 @@ while ( 1 == 1):
 	SendCommand(remote_ID,"E" + eev_target)	#sends 0AE02.50, command format ENN.NN
 	sleep (5)
 ```
- 
 Script output example (click to enlarge):<br>
 <img src="./m_script_output_screen.png" width="400"><br><br>
 Short names (keys) specific for JSON communication:
-| Abbr. | Full name             |
-| ----- | --------------------  |
-| A1   | setpoint      		| 
-| E1   | error code     	|
-| HPC   | Heat Pump connected (to remote display, 1=yes, 0=no)      |
-| W1   | Watts    		|
+| Abbr. | Full name |
+| ----- | -------------------- |
+| A1 | setpoint |
+| E1 | error code |
+| HPC | Heat Pump connected (to remote display, 1=yes, 0=no) |
+| W1 | Watts |
 
-All another abbrevations (keys) you'll see in responses are listed at [HeatPumpController](https://github.com/openhp/HeatPumpController/) appendix. Error codes also there.<br><br>
+All abbreviations and status messages you'll see at the display are listed at the [Valden Heat Pump Controller](https://github.com/openhp/HeatPumpController/) appendix. Error codes also there.<br><br>
 
-
-What's next? You have all information you need to integrate, for example, with Home Assistant or another "Smart Home" system you like. Just parse gotten strings (that's very easy in python) and feed key-value pairs to your favourite system.<br>
-I do not use "smart home" systems, but I like graphs. Graphs helps to analyse processes dynamics. So I have a script (much more complicated script) on server side, that get stats from all my devices and draw graphs for me.<br>
-Example, daily graph for one of my Heat Pumps:<br>
-![daily graph example](./m_daily_graph_example.png)<br><br>
+What's next? You have all information you need to integrate, for example, with Home Assistant or another "Smart Home" system you like. Just parse gotten strings (that's very easy in a python) and feed key-value pairs to your favorite system.<br>
+I do not use "smart home" systems, but I like graphs. Graphs help to analyze processes dynamics. So, I have a script (much more complicated script) on the server side, that get stats from all of my devices and draw graphs for me.<br>
+For example, daily graph for one of my Heat Pumps:<br>
+![daily graph example](./m_daily_graph_example.png)<br>
 To get graphs you can use something like Cacti monitoring system.<br>
-And one more: you can use "set temperature" commands to automatically change "setpoint" temperature and create comfortable balance between power saving and house temperature. Or daily-dependent, hourly-dependent or something-else temperature dependent system.<br><br>
-
+And one more: you can use "set temperature" commands to automatically change "setpoint" temperature to create a comfortable balance between power saving and house temperature. Or day-dependent, hour-dependent or something-else temperature dependent system.<br>
 
 ## License
 GPLv3. <br>
