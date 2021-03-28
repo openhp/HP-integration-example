@@ -96,7 +96,7 @@ Short names (keys) specific for JSON communication:
 | HPC | Heat Pump connected (to remote display, 1=yes, 0=no) |
 | W1 | Watts |
 
-All abbreviations and status messages you'll see at the display are listed at the [Valden Heat Pump Controller](https://github.com/openhp/HeatPumpController/) appendix. Error codes also there.<br>
+All abbreviations and status messages you'll see at the display are listed at the [Valden Heat Pump Controller](https://github.com/openhp/HeatPumpController/) appendix. Error codes also there.<br><br>
 What's next? You have all information you need to integrate, for example, with Home Assistant or another "Smart Home" system you like. Just parse gotten strings (that's very easy in a python) and feed key-value pairs to your favorite system.<br>
 I do not use "smart home" systems, but I like graphs. Graphs help to analyze processes dynamics. So, I have a script (much more complicated script) on the server side, that get stats from all of my devices and draw graphs for me.<br>
 For example, daily graph for one of my Heat Pumps:<br>
