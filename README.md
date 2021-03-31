@@ -11,6 +11,17 @@ Remember, RS485 is a 3-wire line. Do not use cheap converters without "signal gr
 
 
 ```python
+# Communication example for:
+# - Valden Display  https://github.com/openhp/Display/
+# - Valden Service Display https://github.com/openhp/ServiceDisplay/
+#
+# The source code licensed under GPLv3.
+#
+# This product is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
+# without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+# See the GNU General Public License for more details.
+
+
 import serial
 from time import sleep
 import datetime
@@ -113,7 +124,7 @@ Share and Share Alike: If you make modifications or additions to the content you
 Indicate changes: If you make modifications or additions, you must indicate in a reasonable fashion that the original work has been modified.<br>
 You are free: to share and adapt the material for any purpose, even commercially, as long as you follow the license terms.</sub><br>
 
-The firmware source code licensed under [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html). <br>
+The source code licensed under [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html). <br>
 <sub>This product is distributed in the hope that it will be useful,	but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</sub><br>
 
 For third-party libraries licenses used in this product please refer to those libraries.<br>
