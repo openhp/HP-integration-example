@@ -105,7 +105,7 @@ To get graphs you can use something like Cacti monitoring system.<br><br>
 And one more: you can use "set temperature" commands to automatically change "setpoint" temperature to create a comfortable balance between power saving and house temperature. Or day-dependent, hour-dependent or something-else temperature dependent system.<br>
 
 ## License
-© 2018-2021 D.A.A. All rights reserved; gonzho AT web.de; https://github.com/openhp/HP-integration-example/.<br>
+© 2015-2021 D.A.A. All rights reserved; gonzho AT web.de; https://github.com/openhp/HP-integration-example/.<br>
 
 Text, media and other materials licensed under [CC-BY-SA License v4.0](https://creativecommons.org/licenses/by-sa/4.0/).<br>
 <sub>Attribution: You must clearly attribute Valden Heat Pump integration (https://github.com/openhp/HP-integration-example/) original work in any derivative works.<br>
